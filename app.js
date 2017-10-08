@@ -32,7 +32,9 @@ app.get("/gioi-thieu", function (req, res, next) {
 })
 app.post('/send-email', function (req, res, next) {
   const email = req.body['email'];
-  db.sendEmail(email).then(result => {
+  const phone = req.body['phone'];
+  const name = req.body['name'];
+  db.sendEmail(name,phone,email).then(result => {
     res.status(200).send();
   }).catch(() => res.status(400).send());
 })

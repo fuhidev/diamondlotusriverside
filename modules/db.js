@@ -8,9 +8,9 @@ const config = {
 };
 const client = new Client(config);
 client.connect();
-var sendEmail = function (email) {
+var sendEmail = function (name,phone,email) {
   return new Promise((resolve, reject) => {
-    let query = `INSERT INTO contact(email,thoigian)VALUES ('${email}',CURRENT_TIMESTAMP);`
+    let query = `INSERT INTO contact(name,phone,email,thoigian)VALUES ('${name}','${phone}','${email}',CURRENT_TIMESTAMP);`
 
     client.query(query)
       .then(res => {
@@ -21,7 +21,7 @@ var sendEmail = function (email) {
 }
 var getEmail = function(){
   return new Promise((resolve, reject) => {
-    let query = `SELECT email,name,thoigian FROM CONTACT`
+    let query = `SELECT email,phone,name,thoigian FROM CONTACT`
 
     client.query(query)
       .then(res => {

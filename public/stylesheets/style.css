@@ -847,6 +847,7 @@ footer.main-footer nav.footer-nav ul li a{
 }
 /*input 1*/
 .input_1{
+	margin-bottom: 7px;
 	height: 50px;
 	width: 100%;
 	border:solid 1px rgba(0,0,0,.1);

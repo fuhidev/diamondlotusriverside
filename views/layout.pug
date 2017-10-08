@@ -67,6 +67,12 @@ body.animsition
             #newsletter-notify
             div
               .input_1
+                input(type='text', id='newsletter-name')
+                span tên
+              .input_1
+                input(type='text', id='newsletter-phone')
+                span số điện thoại
+              .input_1
                 input(type='text', id='newsletter-email')
                 span th&#x1B0; &dstrok;i&#x1EC7;n t&#x1EED;
               button#newsletter-submit.btn.green(style='margin-top:20px')
@@ -108,19 +114,6 @@ body.animsition
   script(type='text/javascript', src='javascripts/wow.min.js')
   script(type='text/javascript', src='javascripts/main.js')
   script window._sbzq || function (e) { e._sbzq = []; var t = e._sbzq; t.push(["_setAccount", 71486]); var n = e.location.protocol == "https:" ? "https:" : "http:"; var r = document.createElement("script"); r.type = "text/javascript"; r.async = true; r.src = n + "//static.subiz.com/public/js/loader.js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) }(window);
-  script(type='text/javascript', charset='utf-8').
-    $(window).load(function () {
-      $('#newsletter-submit').click(function(){
-        let email = $('#newsletter-email').val();
-        let notify = $('#newsletter-notify');
-        if (email && email.length > 0) {
-          $.post('/send-email', { email: email })
-            .done(() => {
-              notify.attr("class", "alert alert-success");
-              notify.text('Cảm ơn quý khách, chúng tôi sẽ liên lạc quý khách trong thời gian ngắn nhất.')
-            })
-            .fail(() => { notify.attr("class", "alert alert-danger"); notify.text('Đã có lỗi xảy ra trong quá trình gửi, xin vui lòng thử lại.') })
-            .always(function () { setTimeout(() => {notify.attr("class", ""); notify.text(''); }, 5000); });
-        }
-      })})
+  script(type='text/javascript', src='javascripts/layout.js')
+
   block javascripts
