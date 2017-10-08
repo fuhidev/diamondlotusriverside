@@ -2,7 +2,7 @@ extends layout
 
 block content
   <!-- HERO SECTION  -->
-  #site-hero.site-hero
+  .site-hero
     ul.slides
       li
         div
@@ -16,17 +16,29 @@ block content
   // HISTORY OF AGENCY
   .container
     .agency
-      .col-md-5.col-sm-12
+      .col-md-4.col-sm-12
         .row
           img(src='images/agency.png', alt='image')
-      .col-md-offset-1.col-md-6.col-sm-12
-        .row.transparent-text
+      .col-md-8.col-sm-12
+        .row.transparent-text(style="height:300px")
           .section-title
-            span ti&ecirc;u chu&#x1EA9;n Hoa K&#x1EF3; - &ldquo;LEED&rdquo; l&#x1EA7;n &dstrok;&#x1EA7;u ti&ecirc;n t&#x1EA1;i VI&#x1EC6;T NAM
-          p(style='white-space:pre;').
-            Bảo vệ môi trường
-            Tiết kiệm năng lượng
-            Không gian xanh tuyệt hảo cho cuộc sống viên mãn
+            p.title(style="font-size:34px") ti&ecirc;u chu&#x1EA9;n Hoa K&#x1EF3; - &ldquo;LEED&rdquo;
+            p.title l&#x1EA7;n &dstrok;&#x1EA7;u ti&ecirc;n t&#x1EA1;i VI&#x1EC6;T NAM
+          p
+            | Đây là tiêu chuẩn quốc tế tiên phong về vấn đề xây dựng các công trình tiết kiệm năng lượng và bảo vệ môi trường sống của con người. Đáp ứng 6 tiêu chí:
+            br
+            | 1. Thiết kế địa điểm bền vững
+            br
+            | 2. Sử dụng có hiệu quả tài nguyên nước
+            br
+            | 3. Năng lượng với môi trường
+            br
+            | 4. Vật liệu và tài nguyên
+            br
+            | 5. Chất lượng môi trường trong phòng
+            br
+            | 6. Thiết kế có tính đổi mới
+            br
           //- a.btn.green(href='#', style='float:right;margin-top:30px')
           //-   span chi tiết
   //TONG QUAN
@@ -67,7 +79,7 @@ block content
         .desc 1.286 t&#x1EC9;
       .col-xs-12.wow.fadeInUp
         .video-responsive
-          iframe(width='560', height='315', src='https://www.youtube.com/embed/eDKj0l6W8Ok?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/tDnHcGtyMMo?rel=0&autoplay=1&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
   //VI TRI DOC TON
   section.location
     .container
@@ -118,9 +130,6 @@ block content
       .row
         .section-title
           span lợi thế vượt trội
-      .col-xs-12.wow.fadeInUp
-        .video-responsive
-          iframe(width='560', height='315', src='https://www.youtube.com/embed/jNytDb6G9vs?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
   //TIEN ICH CHUAN 5 SAO
   section
     .container
@@ -137,18 +146,32 @@ block content
             li(data-target='#crlTienIch5Sao', data-slide-to='2')
             li(data-target='#crlTienIch5Sao', data-slide-to='3')
             li(data-target='#crlTienIch5Sao', data-slide-to='4')
+            li(data-target='#crlTienIch5Sao', data-slide-to='5')
           // Wrapper for slides
           .carousel-inner
             .item.active
               img(src='images/tien-ich-chuan-5-sao-1.jpg', alt='tiện ích chuẩn 5 sao')
+              .carousel-caption
+                h3 SKY PARK
+                p Đây là khu cao nhất nằm trên đỉnh căn hộ Diamond Lotus, với thiết kế độc đáo tại đây được xem là một ốc đảo thu nhỏ ngay trên bầu trời. Ngoài ra khu Sky Park còn kết hợp dây văng tạo nên một hình thể kiến trúc vô cùng lạ mắt. Nơi đây là nơi sinh hoạt chung cũng như các dịch vụ Spa, View ngắm cảnh, Yoga…
             .item
               img(src='images/tien-ich-chuan-5-sao-2.jpg', alt='tiện ích chuẩn 5 sao')
+              .carousel-caption
+                h3 Không gian tuyệt hảo trên sân thượng
+                p
             .item
               img(src='images/tien-ich-chuan-5-sao-3.jpg', alt='tiện ích chuẩn 5 sao')
+              .carousel-caption
+                h3 Dịch vụ nhà hàng
+                p
             .item
               img(src='images/tien-ich-chuan-5-sao-4.jpg', alt='tiện ích chuẩn 5 sao')
             .item
               img(src='images/tien-ich-chuan-5-sao-5.jpg', alt='tiện ích chuẩn 5 sao')
+              .carousel-caption
+                h3 Khu SPA
+            .item
+              img(src='images/tien-ich-chuan-5-sao-6.jpg', alt='tiện ích chuẩn 5 sao')
           // Left and right controls
           a.left.carousel-control(href='#crlTienIch5Sao', data-slide='prev')
             span.ion-arrow-left-c
@@ -358,6 +381,9 @@ block content
           a.right.carousel-control(href='#crlTiendoduan', data-slide='next')
             span.ion-arrow-right-c
             span.sr-only sau
+      .col-xs-12.wow.fadeInUp(style="margin-top:15px")
+        .video-responsive
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/jNytDb6G9vs?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')  
   //CHINH SACH BAN HANG
   section
     .container
@@ -516,9 +542,4 @@ block content
       });
       return false;
       });
-      let bg_img = ["images/diamond-lotus-riverside-can-ho-xanh-ban-dem.jpg", "images/diamond-lotus-riverside-can-ho-xanh-ban-dem.jpg"];
-      setInterval(() => {
-      let img = bg_img[Math.floor((Math.random() * bg_img.length))];
-      $('.site-hero').css('background-image', `url('${img}')`);
-      }, 5000);
       });

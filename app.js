@@ -36,6 +36,14 @@ app.post('/send-email', function (req, res, next) {
     res.status(200).send();
   }).catch(() => res.status(400).send());
 })
+app.get('/email', function (req, res, next) {
+  db.getEmail().then(result => {
+    console.log(result);
+    res.render('email',{
+      thongtin:result
+    });
+  }).catch(() => res.status(400).send());
+})
 
 app.post('/contact', function (req, res, next) {
   // const name = req.body['name'],email = req.body['email'],message = req.body['message'];

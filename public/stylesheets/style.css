@@ -145,6 +145,17 @@ ul.social-icons li a:hover{
     height: 20px;
     background-repeat: no-repeat;
 }
+.section-title p.title{
+	z-index: 1;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	text-transform: uppercase;
+	color:#d8c665;
+	position: relative;
+	margin-bottom: 20px;
+	text-align: center
+}
 .section-title p.heading{
 	color:#d8c664;
 	font-size:20px;
@@ -153,8 +164,8 @@ ul.social-icons li a:hover{
 	margin-bottom: 7px;
 }
 .section-title p{
-	line-height: 24px;
-	color:#fff;
+	font-size: 17px;
+    color: #fff;
 }
 @media (max-width: 991px) {
 	.section-title{
@@ -512,7 +523,7 @@ footer.main-footer nav.footer-nav ul li a{
 .site-hero{
 	height: 850px;
 	width: 100%;
-	background: #fff url("../images/site-hero.jpg") no-repeat;
+	background: #fff url("../images/diamond-lotus-riverside-can-ho-xanh-ban-dem.jpg") no-repeat;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
@@ -581,12 +592,13 @@ footer.main-footer nav.footer-nav ul li a{
 	margin-top: -300px;
 }
 .agency img{
-	max-height: 400px;
+	max-height: 298px;
 	width: auto;
 }
 .agency p{
-	font-size:20px;
-	color:#fff;
+	font-size: 15px;
+    color: #fff;
+    line-height: 23px;
 }
 .agency .section-title{
 	text-align:left;
@@ -596,7 +608,7 @@ footer.main-footer nav.footer-nav ul li a{
 @media (max-width: 991px) {
 	.site-hero ul.slides{height: 750px;}
 	.agency{margin-top: 30px;}
-	.agency img{margin-bottom: 30px;width: 100%}
+	.agency img{margin-bottom: 30px;width: 100%;max-height: unset}
 	.agency .section-title{margin: 0 auto;text-align: center;}
 	.agency p{text-align: center;}
 }
@@ -1296,4 +1308,7 @@ img.radius{
     height:100%;
     width:100%;
     position:absolute;
+}
+.carousel-caption{
+	background-color: rgba(6, 6, 6, 0.75);
 }

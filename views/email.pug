@@ -1,0 +1,19 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title EMAIL
+    body
+    table
+        thead
+            tr
+                th Email
+                th Ten
+                th Thoi gian
+        tbody
+            each val in thongtin
+                tr
+                    td= val['email']||'khong co'
+                    td= val['name'] ||'khong co'
+                    td= val['thoigian'] ||'khong co'
