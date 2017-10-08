@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var db = require('./modules/db');
 // var index = require('./routes/index');
 
 var app = express();
@@ -30,11 +30,15 @@ app.get("/lien-he", function (req, res, next) {
 app.get("/gioi-thieu", function (req, res, next) {
   res.render('about', { title: 'Express' });
 })
-app.post('/send-email',function(req,res,next){
-  const name = req.body['name'],email = req.body['email'],message = req.body['message'];
+app.post('/send-email', function (req, res, next) {
+  const email = req.body['email'];
+  db.sendEmail(email).then(result => {
+    res.status(200).send();
+  }).catch(() => res.status(400).send());
 })
-app.post('/contact',function(req,res,next){
-  
+
+app.post('/contact', function (req, res, next) {
+  // const name = req.body['name'],email = req.body['email'],message = req.body['message'];
 })
 // app.use('/', index);
 // app.use('/users', users);

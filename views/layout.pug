@@ -58,18 +58,18 @@ body.animsition
       .col-md-6.col-sm-12
         .row
           span.white-text.montserrat-text.uppercase(style='font-size:30px;display:block;') nếu bạn thấy tuyệt vời, hãy để chúng tôi tư vấn
-          a.btn.white(href='#', style='margin-top:30px')
+          a.btn.white(href='/lien-he', style='margin-top:30px')
             span li&ecirc;n h&#x1EC7;
       .col-md-6.col-sm-12
         .row
           .white-section(style='padding:20px')
             span.montserrat-text.uppercase(style='font-size:24px') nh&#x1EAD;n b&aacute;o gi&aacute; v&agrave; th&ocirc;ng tin d&#x1EF1; &aacute;n
-            p
-            form(action='/send-email', method='post')
+            #newsletter-notify
+            div
               .input_1
-                input(type='text', name='email')
+                input(type='text', id='newsletter-email')
                 span th&#x1B0; &dstrok;i&#x1EC7;n t&#x1EED;
-              button.btn.green(type='submit', style='margin-top:20px')
+              button#newsletter-submit.btn.green(style='margin-top:20px')
                 span g&#x1EED;i
   <!-- FOOTER -->
   footer.main-footer.wow.fadeInUp
@@ -107,4 +107,20 @@ body.animsition
   script(type='text/javascript', src='javascripts/jquery.animsition.min.js')
   script(type='text/javascript', src='javascripts/wow.min.js')
   script(type='text/javascript', src='javascripts/main.js')
+  script window._sbzq || function (e) { e._sbzq = []; var t = e._sbzq; t.push(["_setAccount", 71486]); var n = e.location.protocol == "https:" ? "https:" : "http:"; var r = document.createElement("script"); r.type = "text/javascript"; r.async = true; r.src = n + "//static.subiz.com/public/js/loader.js"; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(r, i) }(window);
+  script(type='text/javascript', charset='utf-8').
+    $(window).load(function () {
+      $('#newsletter-submit').click(function(){
+        let email = $('#newsletter-email').val();
+        let notify = $('#newsletter-notify');
+        if (email && email.length > 0) {
+          $.post('/send-email', { email: email })
+            .done(() => {
+              notify.attr("class", "alert alert-success");
+              notify.text('Cảm ơn quý khách, chúng tôi sẽ liên lạc quý khách trong thời gian ngắn nhất.')
+            })
+            .fail(() => { notify.attr("class", "alert alert-danger"); notify.text('Đã có lỗi xảy ra trong quá trình gửi, xin vui lòng thử lại.') })
+            .always(function () { setTimeout(() => {notify.attr("class", ""); notify.text(''); }, 5000); });
+        }
+      })})
   block javascripts
