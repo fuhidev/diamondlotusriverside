@@ -147,6 +147,7 @@ ul.social-icons li a:hover{
 }
 .section-title p.title{
 	z-index: 1;
+	line-height: 34px;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	font-size: 30px;
@@ -598,7 +599,7 @@ footer.main-footer nav.footer-nav ul li a{
 .agency p{
 	font-size: 15px;
     color: #fff;
-    line-height: 23px;
+    line-height: 21px;
 }
 .agency .section-title{
 	text-align:left;
@@ -1283,7 +1284,7 @@ footer.main-footer nav.footer-nav ul li a{
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #d8c665;
+    color: #fff;
     left: 20px;
     bottom: 0;
     background-color: #0b7c4b;
@@ -1312,4 +1313,32 @@ img.radius{
 }
 .carousel-caption{
 	background-color: rgba(6, 6, 6, 0.75);
+}
+.carousel-inner img{
+	max-height: 530px;
+}
+.partner img{
+max-width: 160px;
+}
+.partner .top img{
+	max-width:300px;
+}
+@media (max-width: 991px) {
+	.partner .top img,.partner img{
+		max-width:unset;
+		width: 100%;
+	}
+}
+.partner .small-title {
+	width: 168px;
+	font-size: 14px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
