@@ -1313,12 +1313,14 @@ img.radius{
 }
 .carousel-caption{
 	background-color: rgba(6, 6, 6, 0.75);
+	margin-bottom: 20px;
+	padding: 0
 }
 .carousel-inner img{
 	max-height: 530px;
 }
 .partner img{
-max-width: 160px;
+	max-width: 160px;
 }
 .partner .top img{
 	max-width:300px;

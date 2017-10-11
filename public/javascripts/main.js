@@ -6,26 +6,6 @@
 
 (function($){
 	$(window).load(function(){
-		// INITIALIZE ANIMSITION
-		if($(".animsition").length){
-			$(".animsition").animsition({
-				inClass               :   'fade-in-up-sm',
-				outClass              :   'fade-out-up-sm',
-				inDuration            :    1100,
-				outDuration           :    800,
-				linkElement           :   '.animsition-link',
-				loading               :    true,
-				loadingParentElement  :   'body', 
-				unSupportCss          : [ 'animation-duration',
-										  '-webkit-animation-duration',
-										  '-o-animation-duration'
-										],
-				overlay               :   false,
-				overlayClass          :   'animsition-overlay-slie',
-				overlayParentElement  :   'body'
-			});
-		}
-
 		// INPUTS EVENTS
 		$(".input_1 input, .textarea_1 textarea").focus(function(){
 			$(this).next("span").addClass("active");
