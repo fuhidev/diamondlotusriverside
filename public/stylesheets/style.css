@@ -121,7 +121,7 @@ ul.social-icons li a:hover{
 	margin: 0 auto 100px;
 	text-align: center;
 }
-.section-title span{
+.section-title h1{
 	position: relative;
 	z-index: 1;
 	font-family: "Montserrat", sans-serif;
@@ -133,7 +133,7 @@ ul.social-icons li a:hover{
 	display: inline-block;
 	margin-bottom: 20px;
 }
-.section-title span:after{
+.section-title h1:after{
 	content: "";
     background-image: url('../images/bg-sweet.png');
     /* background-color: #0b7c4b; */
@@ -145,12 +145,12 @@ ul.social-icons li a:hover{
     height: 20px;
     background-repeat: no-repeat;
 }
-.section-title p.title{
+.section-title h2{
 	z-index: 1;
 	line-height: 34px;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 23px;
 	text-transform: uppercase;
 	color:#d8c665;
 	position: relative;
@@ -1332,7 +1332,7 @@ img.radius{
 	}
 }
 .partner .small-title {
-	width: 168px;
+	width: 100%;
 	font-size: 14px;
     display: inline-block;
     position: relative;
